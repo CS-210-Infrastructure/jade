@@ -13,13 +13,16 @@ PYTHON_CMD := python
 ```
 
 
+Python 3.13
+=====
+
 Since python3.13, the following Makefile support was added (for the cgi package).
 
 Run as follows:
 
-`make setup` : upon installation of jade
+`make setup-py3` : upon installation of jade
 
-`make run` : to start up the jade server
+`make run-py3` : to start up the jade server
 
 Old Instructions
 =====
