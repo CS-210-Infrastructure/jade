@@ -1,11 +1,24 @@
 Using Jade
 =====
 
+To run the server, simply type:
+```
+make run
+```
+
+If you run into an issue saying "python3" is not recognized, modify the line in Makefile to the appropriate command you use to run python:
+
+```
+PYTHON_CMD := python
+```
+
+
 Since python3.13, the following Makefile support was added (for the cgi package).
 
 Run as follows:
 
 `make setup` : upon installation of jade
+
 `make run` : to start up the jade server
 
 Old Instructions
