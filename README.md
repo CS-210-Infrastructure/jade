@@ -3,18 +3,21 @@ Using Jade
 
 To run the server, simply type:
 ```
-make run
+python internal/server.py
 ```
 
-If you run into an issue saying "python3" is not recognized, modify the line in Makefile to the appropriate command you use to run python:
+You MUST be located in the ROOT of the jade folder.
+(type `pwd` to check where your terminal is!)
 
+If you have python3 on your machine, run:
 ```
-PYTHON_CMD := python
+python3 internal/server.py
 ```
 
 
 Python 3.13
 =====
+(This only works on MAC or Linux)
 
 Since python3.13, the following Makefile support was added (for the cgi package).
 
