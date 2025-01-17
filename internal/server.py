@@ -51,6 +51,7 @@ class JadeRequestHandler(BaseHTTPRequestHandler):
         path = path.replace('/','')
         if path == '': path = 'index.html'
         ctype = self.guess_type(path)
+        path = "internal/"+path
         try:
             f = open(path, 'rb')
         except IOError:
@@ -377,7 +378,7 @@ def autosave_task():
 
             backup_files = [f for f in os.listdir("autosave") if f.startswith("autosave-" + jsonfile.split('.')[0])]
             num_files = len(backup_files)
-            if num_files >= 5:
+            if num_files >= 100:
                 oldest_file = min(backup_files, key=lambda f: os.path.getctime(os.path.join("autosave/", f)))
                 os.remove("autosave/" + oldest_file)
 
