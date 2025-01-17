@@ -1,9 +1,14 @@
+PYTHON_CMD := python3
+
 setup:
-	python3 -m venv internal/venv
+	${PYTHON_CMD} -m venv internal/venv
 	(\
 	source internal/venv/bin/activate ;\
 	pip install legacy-cgi\
 	)
+
+clean:
+	rm -rf internal/venv
 
 run:
 	(\
