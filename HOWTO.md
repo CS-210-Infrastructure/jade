@@ -29,7 +29,7 @@ This is a working document and will be updated as new functionality is added and
 
 ## The Tools
 ### File Tools
-![File Tools](./howto_imgs/filetools.png)
+![File Tools](./internal/howto_imgs/filetools.png)
 1. **Module Select**: Switch between various modules in the current state / JSON.
 2. **Edit/Create Module**: After being prompted, enter a previously unused module name to create a new module. Alternatively, enter an existing module name to switch to that module. 
    - If the provided module name does not start with "/", the module name is assumed to start with "/user/". In other words, if you enter "mymodule" as the desired module, you will go to module "/user/mymodule"
@@ -40,13 +40,13 @@ This is a working document and will be updated as new functionality is added and
 7. **Stop Server**: Terminate the server hosting the Jade web server.
 
 ### JSON File Switcher
-![JSON Switcher](./howto_imgs/jsonswitcher.png)
+![JSON Switcher](./internal/howto_imgs/jsonswitcher.png)
 - Some assignments in CS210 may ask you to work with multiple JSON files. You may utilize the built-in JSON switcher in the user interface to switch between different files. Upon choosing a file, your interface should refresh and load the contents of the new JSON file.
 
 - **IMPORTANT: All JSON files being used with Jade should be stored in the same directory where Jade's files are located (i.e. same directory as server.py). In addition, avoid using JSON files not intended for use with Jade. Failure to do so may lead to unexpected behavior.**
 
 ### JSON Backups
-![JSON Backups](./howto_imgs/json-backups.png)
+![JSON Backups](./internal/howto_imgs/json-backups.png)
 
 - In addition to the automatic file saving features of Jade, in case something goes wrong or you want to go back to an earlier point, you can enable this feature to have Jade start saving copies of your current save state that will be stored in an `autosaves` directory, with the filename containing the filename of the current JSON file as well as the date and time the backup was created.
 
@@ -57,14 +57,14 @@ This is a working document and will be updated as new functionality is added and
 - To use an autosave file, move/copy it into the main Jade directory (i.e. the same directory as server.py) and either start Jade with that file or use the JSON file switcher.
 
 ### Views
-![Views](./howto_imgs/views.png)
+![Views](./internal/howto_imgs/views.png)
 - **Schematic**: Your main working area, this is where you can utilize analog and gate devices to build your circuits.
 - **Icon**: This is where you can modify what your completed module looks like and how it looks in other modules.
 - **Properties**: Fine-tune parameters of the Jade tool here. Not likely to be used for CS210 assignments.
 - **Test**: This is where you can view and/or edit the tests for the currently selected module.
 
 ### Schematic Tools
-![Schematic Tools](./howto_imgs/schematictools.png)
+![Schematic Tools](././internal/howto_imgs/schematictools.png)
 1. **Grid**: Enable/Disable the grid overlay.
 2. **Undo**: Reverts the previous action.
 3. **Redo**: Performs the operation that was previously undone.
@@ -85,7 +85,7 @@ This is a working document and will be updated as new functionality is added and
 18. **Text**: Adds a new text element to the schematic.
 
 ### Schematic Testing / Saving Tools
-![Schematic Testing / Saving Tools](./howto_imgs/schematictools-test.png)
+![Schematic Testing / Saving Tools](./internal/howto_imgs/schematictools-test.png)
 
 **IMPORTANT: All of the tools in this section that save files to the device will completely overwrite any existing file matching the file's name, so be sure to double check your files and make any copies as needed prior to performing the operation.**
 
@@ -96,7 +96,7 @@ This is a working document and will be updated as new functionality is added and
 5. **Combine Modules**: Select one or more files and consolidate all of their modules into a new JSON file with a name of your choosing. Existing files are unchanged.
 
 ### Schematic Viewer Tools
-![Schematic Viewer Tools](./howto_imgs/schematicviewtools.png)
+![Schematic Viewer Tools](./internal/howto_imgs/schematicviewtools.png)
 1. **Move**: Move the schematic viewer up, down, left, or right.
 2. **Zoom In**: Zoom into the schematic viewer.
 3. **Zoom Out**: Zoom out of the schematic viewer.
@@ -119,7 +119,7 @@ From there, you'll be prompted to make two selections:
 
 **IMPORTANT: Make sure your JSON file is in the same directory as all of your Jade files, otherwise the program will not be able to find it. Avoid using JSON files not intended to be used with Jade.**
 
-![Starting Python Server](./howto_imgs/python-start-server.gif)
+![Starting Python Server](./internal/howto_imgs/python-start-server.gif)
 
 If prompted with a pop-up requesting you to allow Jade access through a firewall or network security system, you should allow access to be granted. Otherwise, the server may be inaccessible to you.
 
@@ -137,7 +137,7 @@ Once a request is received and is ready to be processed by the server, it will p
 
 Check out [this](https://http.cat/) link for some fun cat images and an explanation as to what many of the HTTP status codes mean. Furthermore, see the below diagram that highlights how the client-server model operates.
 
-![Client-Server Model](./howto_imgs/client-server-model.png)
+![Client-Server Model](./internal/howto_imgs/client-server-model.png)
 
 ### Creating Your First Schematic
 
@@ -149,7 +149,7 @@ Note, for various assignments in CS210, you may need to name the inputs/outputs 
 
 See below for a visual tutorial utilizing an AND gate.
 
-![First Schematic](./howto_imgs/first-schematic.gif)
+![First Schematic](./internal/howto_imgs/first-schematic.gif)
 
 ### Special Inputs
 
@@ -179,7 +179,7 @@ Here's the rundown of how you can use the naming scheme to leverage this functio
 
 See below for an example leveraging multi-bit values featuring a NAND gate.
 
-![Multi-Bit Example](./howto_imgs/multibit.gif)
+![Multi-Bit Example](./internal/howto_imgs/multibit.gif)
 
 ### Switching JSON Files
 
@@ -196,7 +196,7 @@ If using the built-in JSON switcher, you should also get a confirmation in the p
 
 See below for a visual walkthrough.
 
-![JSON Switching](./howto_imgs/json-switch.gif)
+![JSON Switching](./internal/howto_imgs/json-switch.gif)
 
 ### Stopping the Server
 
@@ -205,7 +205,7 @@ Once you're done working with Jade, there are two options available in order to 
 1) Use the shiny red [Stop Button](#file-tools) in the user interface (seen below)
 2) Stop the python program directly with the 'stop' button in your editor or with the Ctrl-C / Cmd-C command in the terminal running the program.
 
-![Stopping Server](./howto_imgs/stop-server.gif)
+![Stopping Server](./internal/howto_imgs/stop-server.gif)
 
 If using the user interface method, upon successfully terminating the server, you should see a confirmation on the webpage.
 
@@ -255,4 +255,4 @@ If you run into an issue not listed below, be sure to reach out to your course s
 - Test #: Expected output=H/L at TIMEns.
    - Good news: Everything is connected accordingly. Bad news: The logic you've implemented in your schematic has some flaws compared to what the test expected. Check the inputs and outputs at the time specified by the test, and trace through your schematic by hand to see where your logic isn't adding up. You may need to scroll to the right/left, zoom out, or make the test result window larger to see the value for certain inputs/outputs, particularly when the same input value is used for several consecutive tests.
 
-   ![Test Results Example](./howto_imgs/testresults.png)
+   ![Test Results Example](./internal/howto_imgs/testresults.png)
