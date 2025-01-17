@@ -1,6 +1,16 @@
 Using Jade
 =====
 
+Since python3.13, the following Makefile support was added (for the cgi package).
+
+Run as follows:
+
+`make setup` : upon installation of jade
+`make run` : to start up the jade server
+
+Old Instructions
+=====
+
 The Jade schematic entry and simulation tool is a work in progress,
 but you're welcome to experiment!
 
