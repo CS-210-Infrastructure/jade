@@ -38,7 +38,7 @@ edX framework.  To use Jade locally in standalone mode, grab the jade.zip
 file, unzip it on your machine, change to the directory with the jade
 files and run
 
-    python server.py
+    python internal/server.py
 
 to start a basic HTTP server listening on port localhost:8000.
 You can access Jade at
